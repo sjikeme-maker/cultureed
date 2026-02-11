@@ -1,26 +1,27 @@
 :root{
-  --bg: #0f0f14;
-  --bg-soft: #161621;
+  --bg: #f5f2ec;              /* warm editorial beige */
+  --bg-soft: #ffffff;
+  --bg-accent: #f0e9ff;       /* subtle lavender wash */
 
-  --accent: #ff5c8a;      /* expressive pink */
-  --accent2: #6c5cff;     /* deep indigo */
-  --accent3: #00c2a8;     /* cultural teal */
+  --accent: #d62872;          /* expressive magenta */
+  --accent2: #6c5cff;         /* indigo */
+  --accent3: #008c7a;         /* deep cultural teal */
 
-  --text: #f5f5f7;
-  --muted: rgba(255,255,255,0.7);
-  --muted2: rgba(255,255,255,0.45);
+  --text: #111111;
+  --muted: #555555;
+  --muted2: #777777;
 
-  --border: rgba(255,255,255,0.08);
+  --border: rgba(0,0,0,0.08);
 }
 
 *{ box-sizing:border-box; }
+
 body{
   margin:0;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   background:
-    radial-gradient(900px 600px at 10% 10%, rgba(255,92,138,0.18), transparent 60%),
-    radial-gradient(900px 600px at 90% 20%, rgba(108,92,255,0.15), transparent 60%),
-    radial-gradient(900px 600px at 50% 120%, rgba(0,194,168,0.12), transparent 60%),
+    radial-gradient(900px 600px at 10% 10%, rgba(214,40,114,0.10), transparent 60%),
+    radial-gradient(900px 600px at 90% 20%, rgba(108,92,255,0.08), transparent 60%),
     var(--bg);
   color: var(--text);
 }
@@ -33,10 +34,10 @@ body{
 
 /* NAV */
 .nav{
-  backdrop-filter: blur(14px);
-  background: rgba(15,15,20,0.7);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--border);
+  position:sticky;
   top:0;
   z-index:50;
 }
@@ -47,9 +48,8 @@ body{
   align-items:center;
 }
 .brand{
-  font-weight:800;
+  font-weight:900;
   font-size:18px;
-  letter-spacing:-0.03em;
 }
 .navLinks{
   display:flex;
@@ -58,7 +58,7 @@ body{
   color:var(--muted);
 }
 .navLinks a:hover{
-  color:white;
+  color:var(--accent);
 }
 .btn{
   padding:12px 18px;
@@ -74,8 +74,8 @@ body{
 }
 .btnSecondary{
   border:1px solid var(--border);
-  background:transparent;
-  color:white;
+  background:white;
+  color:var(--text);
 }
 
 /* HERO */
@@ -119,7 +119,6 @@ body{
   font-size:32px;
   font-weight:900;
   margin-bottom:10px;
-  letter-spacing:-0.03em;
 }
 .sectionSub{
   color:var(--muted);
@@ -159,7 +158,7 @@ body{
 .ctaBand{
   padding:40px;
   border-radius:24px;
-  background: linear-gradient(135deg, rgba(255,92,138,0.12), rgba(108,92,255,0.12));
+  background:var(--bg-accent);
   border:1px solid var(--border);
 }
 .input{
@@ -167,13 +166,14 @@ body{
   padding:14px 18px;
   border-radius:999px;
   border:1px solid var(--border);
-  background:transparent;
-  color:white;
+  background:white;
+  color:var(--text);
 }
+
+/* FOOTER */
 .footer{
   padding:40px 0;
   border-top:1px solid var(--border);
   text-align:center;
   color:var(--muted2);
 }
-
