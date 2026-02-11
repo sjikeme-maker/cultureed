@@ -1,107 +1,156 @@
 export default function Home() {
   return (
     <>
-      {/* NAV */}
       <div className="nav">
         <div className="container navInner">
-          <div className="brand">
-            <div className="logo" aria-label="CultureEd logo">
-              <img
-                src="/logo.png"
-                alt="CultureEd"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                  e.currentTarget.parentElement.textContent = "CE";
-                }}
-              />
-            </div>
-            <div>CultureEd</div>
-          </div>
-
+          <div className="brand">CultureEd</div>
           <div className="navLinks">
             <a href="#tracks">Tracks</a>
-            <a href="#cohort">Founding cohort</a>
-            <a href="#how">How it works</a>
+            <a href="#cohort">Cohort</a>
+            <a href="#how">How</a>
             <a href="#faq">FAQ</a>
           </div>
-
-          <div className="navCta">
-            <a className="btn btnSecondary" href="#tracks">Explore</a>
-            <a className="btn btnPrimary" href="#waitlist">Join waitlist</a>
-          </div>
+          <a href="#waitlist" className="btn btnPrimary">Join</a>
         </div>
       </div>
 
-      {/* HERO */}
       <section className="hero">
         <div className="container">
-          <div className="heroWrap">
-            <span className="kicker">
-              <span className="dot" />
-              Launching soon • Founding cohort
-            </span>
-
-            <h1 className="h1">Industry literacy, not creator fluff.</h1>
-
-            <p className="sub">
-              CultureEd is a luxury-minimal learning experience built for serious people:
-              clear frameworks, short lessons, and applied tasks that turn knowledge into output.
-            </p>
-
-            <div className="heroCtas">
-              <a className="btn btnPrimary" href="#waitlist">Join the waitlist</a>
-              <a className="btn btnGhost" href="#how">How it works</a>
-            </div>
-
-            <div className="kpiRow">
-              <div className="kpi">
-                <div className="kpiBig">10–25 minutes</div>
-                <div className="kpiSmall">high-signal lessons</div>
-              </div>
-              <div className="kpi">
-                <div className="kpiBig">Applied tasks</div>
-                <div className="kpiSmall">proof, not vibes</div>
-              </div>
-              <div className="kpi">
-                <div className="kpiBig">Track-based</div>
-                <div className="kpiSmall">focused paths</div>
-              </div>
-            </div>
+          <div className="kicker">Founding Cohort • Cultural Literacy</div>
+          <h1 className="h1">Industry literacy.<br/>Cultural authority.</h1>
+          <p className="sub">
+            CultureEd is where creative ambition meets real frameworks. 
+            Less influencer noise. More industry signal.
+          </p>
+          <div className="heroCtas">
+            <a href="#waitlist" className="btn btnPrimary">Join Waitlist</a>
+            <a href="#tracks" className="btn btnSecondary">Explore Tracks</a>
           </div>
         </div>
       </section>
 
-      {/* TRACKS */}
       <section id="tracks" className="section">
         <div className="container">
-          <h2 className="sectionTitle">Tracks</h2>
-          <p className="sectionSub">
-            Start with one track. Build a portfolio of outputs as you go.
-          </p>
+          <div className="sectionTitle">Tracks</div>
+          <div className="sectionSub">
+            Learn deeply. Build publicly. Operate intelligently.
+          </div>
 
-          <div className="grid grid2" style={{ marginTop: 18 }}>
+          <div className="grid grid3">
             <div className="card">
               <div className="cardTitle">Music Industry</div>
               <div className="cardText">
-                Strategy, distribution reality, royalties & publishing—what actually matters.
+                A&R thinking, royalties, distribution systems, publishing realities.
               </div>
             </div>
 
             <div className="card">
               <div className="cardTitle">Entertainment Law</div>
               <div className="cardText">
-                Contract literacy, rights thinking, and practical deal awareness.
+                Rights literacy, negotiation strategy, deal structure clarity.
               </div>
             </div>
 
             <div className="card">
               <div className="cardTitle">Business Affairs</div>
               <div className="cardText">
-                Negotiation mindset, value, leverage, and risk management for culture work.
+                Risk, leverage, ownership, strategic positioning.
               </div>
             </div>
 
             <div className="card">
               <div className="cardTitle">Culture Criticism</div>
-              <d…
+              <div className="cardText">
+                Research discipline, narrative framing, intellectual rigor.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cohort" className="section">
+        <div className="container">
+          <div className="sectionTitle">Founding Cohort</div>
+          <div className="sectionSub">
+            Early access. Smaller room. Bigger impact.
+          </div>
+
+          <div className="grid grid3">
+            <div className="card">
+              <div className="cardTitle">Direct Access</div>
+              <div className="cardText">
+                Engage with frameworks before public release.
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="cardTitle">Influence Product</div>
+              <div className="cardText">
+                Shape curriculum direction and expansion.
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="cardTitle">Founding Status</div>
+              <div className="cardText">
+                Permanent recognition as early architect.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" className="section">
+        <div className="container">
+          <div className="sectionTitle">How It Works</div>
+          <div className="sectionSub">
+            Watch. Apply. Build.
+          </div>
+
+          <div className="grid grid3">
+            <div className="card">
+              <div className="cardTitle">1. Watch</div>
+              <div className="cardText">
+                10–25 minute high-signal lessons.
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="cardTitle">2. Apply</div>
+              <div className="cardText">
+                One applied task per lesson.
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="cardTitle">3. Build</div>
+              <div className="cardText">
+                Stack output into professional proof.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="waitlist" className="section">
+        <div className="container">
+          <div className="ctaBand">
+            <div className="sectionTitle">Join the Waitlist</div>
+            <p className="sectionSub">
+              Founding access opens soon.
+            </p>
+
+            <input type="email" placeholder="Email address" className="input"/>
+            <div style={{marginTop:20}}>
+              <button className="btn btnPrimary">Join</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="footer">
+        © {new Date().getFullYear()} CultureEd
+      </div>
+    </>
+  );
+}
